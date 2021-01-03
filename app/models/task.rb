@@ -4,6 +4,8 @@ class Task < ApplicationRecord
   validate :validate_name_not_including_comma
   #自作の場合はvalidate、用意されているバリデーションはvalidates
 
+  belongs_to :user
+
   private
 
   def validate_name_not_including_comma
